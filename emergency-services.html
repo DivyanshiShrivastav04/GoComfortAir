@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoComfortAir - Professional HVAC Services | Heating & Cooling Experts</title>
+    <meta name="description" content="Professional HVAC services for residential and commercial clients. Expert heating, cooling, installation, repair, and maintenance services.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="uploads/air-conditioner.png" type="image/x-icon">
+    <style>
+        /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand img {
+  height: 50px;
+}
+
+/* Nav Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #007BFF;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    gap: 0px;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    gap: 0px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #f1f1f1;
+  }
+}
+
+.popup-message {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.popup-box p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.popup-box button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cards-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+/* Hide CTA on screens smaller than 768px */
+@media (max-width: 768px) {
+  .cta-button {
+    display: none;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+  <!-- Header -->
+<header class="header">
+  <nav class="nav container">
+    <div class="nav-brand">
+      <a href="index.html"><img src="uploads/header.png" alt="Logo"></a>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-icon" id="menu-icon">
+      &#9776;
+    </div>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#testimonials">Reviews</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <!-- CTA Button -->
+    <a href="index.html#contact" class="cta-button">Get a Free Quote</a>
+  </nav>
+</header>
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>24/7 Emergency HVAC Services</h1>
+            <p>When your heating or cooling system fails, we're here to help. Fast, reliable emergency HVAC repairs available 24 hours a day, 7 days a week.</p>
+            <button class="btn-secondary btn-large">Call Now: (555) 123-4567</button>
+        </div>
+    </section>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="service-details">
+                <div class="service-main">
+                    <h2>When You Need Emergency HVAC Service</h2>
+                    <p>HVAC emergencies don't wait for convenient times. Whether it's a sweltering summer day when your AC fails or a freezing winter night when your heater stops working, you need immediate professional help. Our emergency service technicians are available 24/7, including weekends and holidays, to restore comfort to your home or business.</p>
+
+                    <h2>What Qualifies as an HVAC Emergency?</h2>
+                    <ul>
+                        <li>Complete system failure during extreme weather</li>
+                        <li>No heat during freezing temperatures</li>
+                        <li>No cooling during dangerous heat conditions</li>
+                        <li>Gas leaks or suspected gas line problems</li>
+                        <li>Electrical issues with burning smells</li>
+                        <li>Water leaks from HVAC equipment</li>
+                        <li>Carbon monoxide detector activation</li>
+                        <li>Unusual noises indicating potential damage</li>
+                        <li>Frozen pipes from heating system failure</li>
+                        <li>Commercial HVAC failures affecting business operations</li>
+                    </ul>
+
+                    <h2>Our Emergency Service Promise</h2>
+                    <ul>
+                        <li>24/7 availability, 365 days a year</li>
+                        <li>Fast response times - typically within 2 hours</li>
+                        <li>Fully stocked emergency service vehicles</li>
+                        <li>Certified, experienced emergency technicians</li>
+                        <li>Upfront pricing, even for emergency calls</li>
+                        <li>Same-day repairs whenever possible</li>
+                        <li>Safety-first approach to all emergency situations</li>
+                    </ul>
+
+                    <h2>Emergency Service Process</h2>
+                    <p>When you call our emergency line, here's what happens:</p>
+                    <ul>
+                        <li>Immediate response from our emergency dispatch team</li>
+                        <li>Quick assessment of your emergency situation</li>
+                        <li>Dispatch of nearest available certified technician</li>
+                        <li>Real-time updates on technician arrival time</li>
+                        <li>Rapid diagnosis and emergency repair plan</li>
+                        <li>Temporary solutions if permanent repair requires ordering parts</li>
+                        <li>Complete repair with quality parts and workmanship</li>
+                        <li>Follow-up service to ensure continued operation</li>
+                    </ul>
+
+                    <h2>Emergency Safety Measures</h2>
+                    <p>While waiting for our technician to arrive, follow these safety guidelines:</p>
+                    <ul>
+                        <li>If you smell gas, evacuate immediately and call the gas company</li>
+                        <li>Turn off the system if you notice burning smells or smoke</li>
+                        <li>Never attempt to repair gas lines or electrical components</li>
+                        <li>Keep the area around HVAC equipment clear</li>
+                        <li>If pipes are frozen, turn off water supply to prevent bursting</li>
+                        <li>Use alternative heating/cooling safely while waiting for service</li>
+                    </ul>
+
+                    <h2>Preventing HVAC Emergencies</h2>
+                    <p>While we're always ready to help with emergencies, regular maintenance can prevent many emergency situations. Consider our maintenance service plans to keep your system running reliably and catch potential problems before they become emergencies.</p>
+                </div>
+
+                <div class="service-sidebar">
+                    <div class="service-cta">
+                        <h3 style="color: #dc2626;">HVAC Emergency?</h3>
+                        <a href="index.html#contact">  <button class="btn-primary btn-large">Call +1 (310) 555-0197</button></a>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; font-weight: bold;">Available 24/7/365</p>
+                    </div>
+
+                    <div class="service-info">
+                        <h3>Emergency Service</h3>
+                        <ul>
+                            <li><strong>Availability:</strong> 24/7/365</li>
+                            <li><strong>Response Time:</strong> Within 2 hours</li>
+                            <li><strong>Service Areas:</strong> 50-mile radius</li>
+                            <li><strong>Payment:</strong> All major credit cards</li>
+                            <li><strong>Warranty:</strong> Same as regular service</li>
+                            <li><strong>Follow-up:</strong> Next business day check</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-info">
+                        <h3>Emergency Pricing</h3>
+                        <ul>
+                            <li><strong>Service Call:</strong> $125 after hours</li>
+                            <li><strong>Diagnostic:</strong> $89 (applied to repair)</li>
+                            <li><strong>Hourly Rate:</strong> Standard + $50</li>
+                            <li><strong>Parts:</strong> Standard pricing</li>
+                            <li><strong>Weekend/Holiday:</strong> Additional $25</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="related-services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Related Services</h2>
+                <p>Prevent emergencies with regular care and maintenance</p>
+            </div>
+            <div class="related-grid">
+                <div class="related-card">
+                    <h4>Maintenance Services</h4>
+                    <p>Regular maintenance to prevent emergency breakdowns and ensure reliable operation.</p>
+                    <a href="maintenance-services.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="related-card">
+                    <h4>Air Conditioning Repair</h4>
+                    <p>Professional AC repair services during regular business hours at standard rates.</p>
+                    <a href="air-conditioning-repair.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="related-card">
+                    <h4>Heating Repair</h4>
+                    <p>Expert heating system repairs to keep your home warm and comfortable.</p>
+                    <a href="heating-repair.html" class="service-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+      <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                <a href="index.html">   <img src="uploads/Modern Air Condition Logo (1).png" style="margin-bottom: 20px;" alt=""></a>
+                    <p>Your trusted HVAC professionals providing quality heating, cooling, and air quality solutions.</p>
+                    
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#testimonials">Reviews</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                           <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="air-conditioning-repair.html">AC Repair</a></li>
+                        <li><a href="heating-repair.html">Heating Repair</a></li>
+                        <li><a href="hvac-installation.html">HVAC Installation</a></li>
+                        <li><a href="maintenance-services.html">Maintenance</a></li>
+                        <li><a href="duct-cleaning.html">Duct Cleaning</a></li>
+                        <li><a href="emergency-services.html">Emergency Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <ul>
+                        <li>1947 Westwood Blvd, Suite 205  
+Los Angeles, CA 90025  
+United States  </li>
+                        <li><a href="tel:+1 (310) 555-0197 ">+1 (310) 555-0197 </a></li>
+                        <li><a href="mailto:customer@gocomfortair.com">customer@gocomfortair.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GoComfortAir LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+  const menuIcon = document.getElementById('menu-icon');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoComfortAir - Professional HVAC Services | Heating & Cooling Experts</title>
+    <meta name="description" content="Professional HVAC services for residential and commercial clients. Expert heating, cooling, installation, repair, and maintenance services.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="uploads/air-conditioner.png" type="image/x-icon">
+    <style>
+        /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand img {
+  height: 50px;
+}
+
+/* Nav Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #007BFF;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    gap: 0px;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    gap: 0px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #f1f1f1;
+  }
+}
+
+.popup-message {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.popup-box p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.popup-box button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cards-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+/* Hide CTA on screens smaller than 768px */
+@media (max-width: 768px) {
+  .cta-button {
+    display: none;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+  <!-- Header -->
+<header class="header">
+  <nav class="nav container">
+    <div class="nav-brand">
+      <a href="index.html"><img src="uploads/header.png" alt="Logo"></a>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-icon" id="menu-icon">
+      &#9776;
+    </div>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- CTA Button -->
+    <a href="#contact" class="cta-button">Get a Free Quote</a>
+  </nav>
+</header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content container">
+            <h1 style="color: #fff;">Professional HVAC Services <br> You Can Trust</h1>
+            <p style="color: #fff; text-align: left;">Expert heating, cooling, and air quality solutions for your home and business. Licensed, insured, and available 24/7 for emergency repairs.</p>
+            <div class="hero-cta">
+              
+           <a href="#contact">    <button class="btn-secondary btn-large" style="color: #fff; ">Get Free Quote</button></a>
+            </div>
+            <div class="hero-features">
+                <div class="feature">
+                    <span class="feature-icon">⚡</span>
+                    <span>Emergency Service</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <span>Licensed & Insured</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🛡️</span>
+                    <span>100% Satisfaction</span>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="hero-image">
+            <img src="uploads/pexels-photo-5691659.png" alt="HVAC Technician Working">
+        </div> -->
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About GoComfortAir</h2>
+                <p>Your trusted HVAC experts serving the community for over 15 years</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Experience You Can Count On</h3>
+                    <p>At GoComfortAir, we've been providing top-quality HVAC services to residential and commercial clients throughout the region. Our team of certified technicians combines years of experience with the latest technology to ensure your comfort year-round.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>5000+</h4>
+                            <span>Happy Customers</span>
+                        </div>
+                        <div class="stat">
+                            <h4>15+</h4>
+                            <span>Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <h4>24/7</h4>
+                            <span>Emergency Service</span>
+                        </div>
+                        <div class="stat">
+                            <h4>100%</h4>
+                            <span>Satisfaction Rate</span>
+                        </div>
+                    </div>
+                    <ul class="about-features">
+                        <li>✓ EPA Certified Technicians</li>
+                        <li>✓ State Licensed & Fully Insured</li>
+                        <li>✓ Upfront Pricing - No Hidden Fees</li>
+                        <li>✓ Same-Day Service Available</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="uploads/pexels-photo-5691660.png" alt="HVAC Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our HVAC Services</h2>
+                <p>Complete heating, cooling, and air quality solutions for every need</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                   
+                     <img src="uploads/ac-reapair_optimized_250.jpg" class="cards-img" alt="">
+                    <h3>Air Conditioning Repair</h3>
+                    <p>Expert AC repair services to get your cooling system running efficiently. Fast diagnosis and professional repairs.</p>
+                    <a href="air-conditioning-repair.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card">
+                   <img src="uploads/heating_optimized_250.jpg" class="cards-img" alt="">
+                    <h3>Heating Repair</h3>
+                    <p>Professional heating system repairs for furnaces, heat pumps, and boilers. Keep your home warm and comfortable.</p>
+                    <a href="heating-repair.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card">
+                   <img src="uploads/hvac-install_optimized_250.jpg" class="cards-img" alt="">
+                    <h3>HVAC Installation</h3>
+                    <p>Complete HVAC system installation with energy-efficient units. Professional setup and warranty included.</p>
+                    <a href="hvac-installation.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <img src="uploads/maintanance_optimized_250.jpg" class="cards-img" alt="">
+                    <h3>Maintenance Services</h3>
+                    <p>Regular HVAC maintenance to prevent problems and improve efficiency. Annual service plans available.</p>
+                    <a href="maintenance-services.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <img src="uploads/duct_optimized_250.jpg" class="cards-img" alt="">
+                    <h3>Duct Cleaning</h3>
+                    <p>Professional air duct cleaning services to improve indoor air quality and system efficiency.</p>
+                    <a href="duct-cleaning.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card">
+                   <img src="uploads/emergency_2_optimized_250.jpg" class="cards-img" alt="">
+                    <h3>Emergency Services</h3>
+                    <p>24/7 emergency HVAC repairs when you need them most. Fast response times and reliable solutions.</p>
+                    <a href="emergency-services.html" class="service-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Read reviews from satisfied customers across the region</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Outstanding service! They fixed our AC unit quickly and professionally. The technician was knowledgeable and explained everything clearly. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Johnson</strong>
+                        <span>Homeowner</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"GoComfortAir installed a new HVAC system in our office building. The team was professional, efficient, and the pricing was very competitive. Great work!"</p>
+                    <div class="testimonial-author">
+                        <strong>Michael Chen</strong>
+                        <span>Business Owner</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Emergency call on a weekend and they came out within 2 hours. Fixed our heating system and had us warm again. Excellent customer service!"</p>
+                    <div class="testimonial-author">
+                        <strong>Lisa Martinez</strong>
+                        <span>Residential Customer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common HVAC questions</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How often should I service my HVAC system?</h3>
+                    <p>We recommend servicing your HVAC system twice a year - once before the heating season and once before the cooling season. Regular maintenance helps prevent breakdowns and improves efficiency.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are signs my HVAC system needs repair?</h3>
+                    <p>Common signs include unusual noises, poor airflow, inconsistent temperatures, high energy bills, and frequent cycling on and off. If you notice any of these issues, contact us for a diagnostic.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How long does HVAC installation take?</h3>
+                    <p>Most residential HVAC installations take 1-2 days, depending on the complexity of the system and any ductwork modifications needed. We'll provide a detailed timeline during your consultation.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer emergency services?</h3>
+                    <p>Yes, we provide 24/7 emergency HVAC services. Whether your system breaks down on a weekend or holiday, our emergency technicians are ready to help restore your comfort.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are your technicians licensed and insured?</h3>
+                    <p>Absolutely. All our technicians are EPA certified, state licensed, and fully insured. We maintain the highest professional standards and ongoing training to serve you better.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What brands do you work with?</h3>
+                    <p>We work with all major HVAC brands including Carrier, Trane, Lennox, Goodman, Rheem, and more. We can service, repair, or install systems from any manufacturer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to schedule service or request a free quote?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <strong>Phone:</strong><a href="tel:+1 (310) 555-0197 " style="text-decoration: none; color: #475569;"> +1 (310) 555-0197 </a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong> <a href="mailto:customer@gocomfortair.com" style="text-decoration: none; color: #475569;"> customer@gocomfortair.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Address:</strong> 1947 Westwood Blvd, Suite 205  
+Los Angeles, CA 90025  
+United States  
+                    </div>
+                    <div class="contact-item">
+                        <strong>Business Hours:</strong><br>
+                        Monday - Friday: 8:00 AM - 6:00 PM<br>
+                        Saturday: 9:00 AM - 4:00 PM<br>
+                        Sunday: Emergency Service Only
+                    </div>
+                    <div class="contact-item">
+                        <strong>Service Areas:</strong> Springfield and surrounding areas within 50 miles
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Request Service</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="ac-repair">Air Conditioning Repair</option>
+                                <option value="heating-repair">Heating Repair</option>
+                                <option value="installation">HVAC Installation</option>
+                                <option value="maintenance">Maintenance Service</option>
+                                <option value="duct-cleaning">Duct Cleaning</option>
+                                <option value="emergency">Emergency Service</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Describe your HVAC needs or issues..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-large">Submit Request</button>
+                    </form>
+                    <div id="popup-message" class="popup-message">
+    <div class="popup-box">
+        <p>✅ Your request has been submitted!</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                <a href="index.html">   <img src="uploads/Modern Air Condition Logo (1).png" style="margin-bottom: 20px;" alt=""></a>
+                    <p>Your trusted HVAC professionals providing quality heating, cooling, and air quality solutions.</p>
+                    
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                           <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="air-conditioning-repair.html">AC Repair</a></li>
+                        <li><a href="heating-repair.html">Heating Repair</a></li>
+                        <li><a href="hvac-installation.html">HVAC Installation</a></li>
+                        <li><a href="maintenance-services.html">Maintenance</a></li>
+                        <li><a href="duct-cleaning.html">Duct Cleaning</a></li>
+                        <li><a href="emergency-services.html">Emergency Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <ul>
+                        <li>1947 Westwood Blvd, Suite 205  
+Los Angeles, CA 90025  
+United States  </li>
+                        <li><a href="tel:+1 (310) 555-0197 ">+1 (310) 555-0197 </a></li>
+                        <li><a href="mailto:customer@gocomfortair.com">customer@gocomfortair.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <a href="http://GoComfortAir.com" style="text-decoration: none; color: #cbd5e1;">GoComfortAir LLC</a>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+  const menuIcon = document.getElementById('menu-icon');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+<script>
+  const form = document.getElementById('contact-form');
+  const popup = document.getElementById('popup-message');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent actual submission
+    popup.style.display = 'flex'; // show popup
+    form.reset(); // optional: clears the form
+  });
+
+  function closePopup() {
+    popup.style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

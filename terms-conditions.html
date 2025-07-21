@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoComfortAir - Professional HVAC Services | Heating & Cooling Experts</title>
+    <meta name="description" content="Professional HVAC services for residential and commercial clients. Expert heating, cooling, installation, repair, and maintenance services.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="uploads/air-conditioner.png" type="image/x-icon">
+    <style>
+        /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand img {
+  height: 50px;
+}
+
+/* Nav Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #007BFF;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    gap: 0px;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    gap: 0px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #f1f1f1;
+  }
+}
+
+.popup-message {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.popup-box p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.popup-box button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cards-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+/* Hide CTA on screens smaller than 768px */
+@media (max-width: 768px) {
+  .cta-button {
+    display: none;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+  <!-- Header -->
+<header class="header">
+  <nav class="nav container">
+    <div class="nav-brand">
+      <a href="index.html"><img src="uploads/header.png" alt="Logo"></a>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-icon" id="menu-icon">
+      &#9776;
+    </div>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#testimonials">Reviews</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <!-- CTA Button -->
+    <a href="index.html#contact" class="cta-button">Get a Free Quote</a>
+  </nav>
+</header>
+
+    <!-- Legal Page Content -->
+    <section class="legal-page">
+        <div class="container">
+            <div class="legal-content">
+                <h1>Terms & Conditions</h1>
+                
+             
+
+                <p>These Terms and Conditions ("Terms") govern your use of GoComfortAir.com's website and services. By accessing our website or using our services, you agree to be bound by these Terms.</p>
+
+                <h2>1. Services</h2>
+                <p>GoComfortAir.com provides heating, ventilation, and air conditioning (HVAC) services including but not limited to:</p>
+                <ul>
+                    <li>HVAC system installation, repair, and maintenance</li>
+                    <li>Emergency HVAC services</li>
+                    <li>Air duct cleaning and indoor air quality services</li>
+                    <li>System diagnostics and consultations</li>
+                </ul>
+
+                <h2>2. Service Appointments</h2>
+                <ul>
+                    <li>Service appointments must be scheduled in advance, except for emergency services</li>
+                    <li>We will provide estimated arrival times and contact you if delays occur</li>
+                    <li>Customer must provide access to HVAC equipment and work areas</li>
+                    <li>Cancellations must be made at least 24 hours in advance to avoid fees</li>
+                </ul>
+
+                <h2>3. Pricing and Payment</h2>
+                <ul>
+                    <li>Service charges are based on current published rates</li>
+                    <li>Written estimates are provided for major repairs and installations</li>
+                    <li>Payment is due upon completion of services unless other arrangements are made</li>
+                    <li>We accept cash, checks, and major credit cards</li>
+                    <li>Late payments may incur additional charges as allowed by law</li>
+                </ul>
+
+                <h2>4. Warranties</h2>
+                <p>We provide warranties on our work and equipment as follows:</p>
+                <ul>
+                    <li>Labor warranty: One (1) year on repair work</li>
+                    <li>Parts warranty: Manufacturer warranty applies</li>
+                    <li>Installation warranty: One (1) year on workmanship</li>
+                    <li>Warranties do not cover normal wear and tear or damage from misuse</li>
+                </ul>
+
+                <h2>5. Limitation of Liability</h2>
+                <p>Our liability is limited to the cost of the services provided. We are not responsible for:</p>
+                <ul>
+                    <li>Damage to property not directly caused by our negligence</li>
+                    <li>Loss of business, profits, or consequential damages</li>
+                    <li>Damage from pre-existing conditions not disclosed by customer</li>
+                    <li>Normal wear and tear of equipment</li>
+                </ul>
+
+                <h2>6. Customer Responsibilities</h2>
+                <p>Customers are responsible for:</p>
+                <ul>
+                    <li>Providing safe access to work areas</li>
+                    <li>Disclosing known problems or hazards</li>
+                    <li>Maintaining adequate clearance around HVAC equipment</li>
+                    <li>Following manufacturer maintenance recommendations</li>
+                    <li>Promptly reporting warranty issues</li>
+                </ul>
+
+                <h2>7. Safety and Permits</h2>
+                <ul>
+                    <li>All work will be performed in accordance with local codes and regulations</li>
+                    <li>Required permits will be obtained for applicable work</li>
+                    <li>Safety of our technicians and your property is our priority</li>
+                    <li>Work may be suspended if unsafe conditions are encountered</li>
+                </ul>
+
+                <h2>8. Emergency Services</h2>
+                <ul>
+                    <li>Emergency services are available 24/7 at premium rates</li>
+                    <li>Emergency service calls require immediate payment</li>
+                    <li>Emergency rates apply to after-hours, weekend, and holiday service</li>
+                    <li>Response times are estimates and may vary based on circumstances</li>
+                </ul>
+
+                <h2>9. Website Use</h2>
+                <p>Use of our website is subject to the following conditions:</p>
+                <ul>
+                    <li>Content is for informational purposes only</li>
+                    <li>You may not use the site for unlawful purposes</li>
+                    <li>We reserve the right to modify or discontinue features</li>
+                    <li>Pricing and availability are subject to change without notice</li>
+                </ul>
+
+                <h2>10. Privacy</h2>
+                <p>Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.</p>
+
+                <h2>11. Dispute Resolution</h2>
+                <ul>
+                    <li>We strive to resolve all disputes through direct communication</li>
+                    <li>Disputes will be governed by the laws of the state where services are provided</li>
+                    <li>Any legal proceedings must be initiated within one year of the dispute</li>
+                </ul>
+
+                <h2>12. Modifications</h2>
+                <p>We reserve the right to modify these Terms at any time. Changes will be posted on our website with an updated effective date. Continued use of our services constitutes acceptance of modified Terms.</p>
+
+                <h2>13. Severability</h2>
+                <p>If any provision of these Terms is found to be unenforceable, the remainder of the Terms will remain in full force and effect.</p>
+
+                <h2>14. Contact Information</h2>
+                <p>For questions about these Terms and Conditions, contact us:</p>
+            <ul>
+  <li><strong>Phone:</strong> <a href="tel:+13105550197" style="text-decoration: none; color: #475569;">+1 (310) 555-0197</a></li>
+  <li><strong>Email:</strong> <a href="mailto:customer@gocomfortair.com" style="text-decoration: none; color: #475569;">customer@gocomfortair.com</a></li>
+  <li><strong>Address:</strong> <span style="color: #475569;">1947 Westwood Blvd, Suite 205, Los Angeles, CA 90025, United States</span></li>
+</ul>
+
+
+                <p>By using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.</p>
+            </div>
+        </div>
+    </section>
+   <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                <a href="index.html">   <img src="uploads/Modern Air Condition Logo (1).png" style="margin-bottom: 20px;" alt=""></a>
+                    <p>Your trusted HVAC professionals providing quality heating, cooling, and air quality solutions.</p>
+                    
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#testimonials">Reviews</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                           <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="air-conditioning-repair.html">AC Repair</a></li>
+                        <li><a href="heating-repair.html">Heating Repair</a></li>
+                        <li><a href="hvac-installation.html">HVAC Installation</a></li>
+                        <li><a href="maintenance-services.html">Maintenance</a></li>
+                        <li><a href="duct-cleaning.html">Duct Cleaning</a></li>
+                        <li><a href="emergency-services.html">Emergency Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <ul>
+                        <li>1947 Westwood Blvd, Suite 205  
+Los Angeles, CA 90025  
+United States  </li>
+                        <li><a href="tel:+1 (310) 555-0197 ">+1 (310) 555-0197 </a></li>
+                        <li><a href="mailto:customer@gocomfortair.com">customer@gocomfortair.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GoComfortAir LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+  const menuIcon = document.getElementById('menu-icon');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

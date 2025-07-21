@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoComfortAir - Professional HVAC Services | Heating & Cooling Experts</title>
+    <meta name="description" content="Professional HVAC services for residential and commercial clients. Expert heating, cooling, installation, repair, and maintenance services.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="uploads/air-conditioner.png" type="image/x-icon">
+    <style>
+        /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand img {
+  height: 50px;
+}
+
+/* Nav Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #007BFF;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    gap: 0px;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    gap: 0px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #f1f1f1;
+  }
+}
+
+.popup-message {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.popup-box p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.popup-box button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cards-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+/* Hide CTA on screens smaller than 768px */
+@media (max-width: 768px) {
+  .cta-button {
+    display: none;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+  <!-- Header -->
+<header class="header">
+  <nav class="nav container">
+    <div class="nav-brand">
+      <a href="index.html"><img src="uploads/header.png" alt="Logo"></a>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-icon" id="menu-icon">
+      &#9776;
+    </div>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#testimonials">Reviews</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <!-- CTA Button -->
+    <a href="index.html#contact" class="cta-button">Get a Free Quote</a>
+  </nav>
+</header>
+
+    <!-- Legal Page Content -->
+    <section class="legal-page">
+        <div class="container">
+            <div class="legal-content">
+                <h1>Disclaimer</h1>
+                
+                    
+
+                <p>This disclaimer governs the use of GoComfortAir.com's website and services. By accessing our website or using our services, you acknowledge and agree to the terms outlined below.</p>
+
+                <h2>General Information</h2>
+                <p>The information provided on this website is for general informational purposes only. While we strive to provide accurate and up-to-date information about our HVAC services, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information, products, services, or related graphics contained on the website.</p>
+
+                <h2>Professional Services</h2>
+                <p>GoComfortAir.com provides professional HVAC services performed by licensed and certified technicians. However:</p>
+                <ul>
+                    <li>Service outcomes may vary based on equipment condition, age, and environmental factors</li>
+                    <li>Diagnostic assessments are based on visible and testable conditions at the time of service</li>
+                    <li>Hidden problems may not be apparent until equipment is disassembled or operated under different conditions</li>
+                    <li>Older equipment may have components that fail shortly after service due to age and wear</li>
+                </ul>
+
+                <h2>Estimates and Pricing</h2>
+                <ul>
+                    <li>Price estimates are based on standard conditions and may change if additional work is required</li>
+                    <li>Final pricing may vary from initial estimates due to unforeseen complications or additional services needed</li>
+                    <li>Equipment prices are subject to manufacturer changes and availability</li>
+                    <li>Promotional pricing and discounts are subject to specific terms and time limitations</li>
+                </ul>
+
+                <h2>Equipment Performance</h2>
+                <p>While we install and service quality HVAC equipment:</p>
+                <ul>
+                    <li>System performance depends on proper maintenance, usage patterns, and environmental conditions</li>
+                    <li>Energy savings estimates are based on average conditions and may vary</li>
+                    <li>Equipment life expectancy is based on manufacturer specifications and may be affected by usage and maintenance</li>
+                    <li>Indoor air quality improvements depend on multiple factors beyond HVAC equipment</li>
+                </ul>
+
+                <h2>Emergency Services</h2>
+                <ul>
+                    <li>Emergency response times are estimates and may vary based on weather, traffic, and call volume</li>
+                    <li>Temporary repairs may be necessary when parts are not immediately available</li>
+                    <li>Safety considerations may require system shutdown until proper repairs can be completed</li>
+                    <li>Emergency service rates apply to after-hours, weekend, and holiday calls</li>
+                </ul>
+
+                <h2>Website Content</h2>
+                <ul>
+                    <li>Information on this website is subject to change without notice</li>
+                    <li>Links to third-party websites are provided for convenience only</li>
+                    <li>We are not responsible for the content or accuracy of external websites</li>
+                    <li>Product specifications and availability are subject to manufacturer changes</li>
+                </ul>
+
+                <h2>Limitation of Liability</h2>
+                <p>GoComfortAir.com and its employees, contractors, and affiliates will not be liable for:</p>
+                <ul>
+                    <li>Any direct, indirect, incidental, consequential, or punitive damages</li>
+                    <li>Loss of profits, business interruption, or data loss</li>
+                    <li>Damages resulting from acts of nature, power outages, or other events beyond our control</li>
+                    <li>Problems arising from customer failure to follow maintenance recommendations</li>
+                </ul>
+
+                <h2>Customer Responsibilities</h2>
+                <p>Customers are responsible for:</p>
+                <ul>
+                    <li>Providing accurate information about their HVAC systems and problems</li>
+                    <li>Maintaining safe access to equipment and work areas</li>
+                    <li>Following manufacturer maintenance and operation guidelines</li>
+                    <li>Promptly reporting warranty issues or service concerns</li>
+                </ul>
+
+                <h2>Environmental and Health Considerations</h2>
+                <ul>
+                    <li>Air quality improvements depend on multiple factors beyond HVAC services</li>
+                    <li>Customers with specific health conditions should consult healthcare professionals</li>
+                    <li>Some HVAC services may temporarily affect indoor air quality during work</li>
+                    <li>Environmental regulations may affect service options and equipment choices</li>
+                </ul>
+
+                <h2>Warranty Limitations</h2>
+                <p>All warranties are subject to:</p>
+                <ul>
+                    <li>Proper system maintenance and operation</li>
+                    <li>Normal wear and tear exclusions</li>
+                    <li>Manufacturer terms and conditions</li>
+                    <li>Timely reporting of warranty issues</li>
+                </ul>
+
+                <h2>Regulatory Compliance</h2>
+                <p>Our services comply with applicable local, state, and federal regulations. However:</p>
+                <ul>
+                    <li>Code requirements may change and affect existing installations</li>
+                    <li>Permit requirements vary by location and project scope</li>
+                    <li>Customer may be responsible for bringing older systems up to current codes</li>
+                </ul>
+
+                <h2>Contact Information</h2>
+                <p>For questions about this disclaimer or our services:</p>
+    <ul>
+  <li><strong>Phone:</strong> <a href="tel:+13105550197" style="text-decoration: none; color: #475569;">+1 (310) 555-0197</a></li>
+  <li><strong>Email:</strong> <a href="mailto:customer@gocomfortair.com" style="text-decoration: none; color: #475569;">customer@gocomfortair.com</a></li>
+  <li><strong>Address:</strong> <span style="color: #475569;">1947 Westwood Blvd, Suite 205, Los Angeles, CA 90025, United States</span></li>
+</ul>
+
+                <p>This disclaimer is subject to change without notice. Your continued use of our services constitutes acceptance of any changes to this disclaimer.</p>
+            </div>
+        </div>
+    </section>
+
+      <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                <a href="index.html">   <img src="uploads/Modern Air Condition Logo (1).png" style="margin-bottom: 20px;" alt=""></a>
+                    <p>Your trusted HVAC professionals providing quality heating, cooling, and air quality solutions.</p>
+                    
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#testimonials">Reviews</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                           <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="air-conditioning-repair.html">AC Repair</a></li>
+                        <li><a href="heating-repair.html">Heating Repair</a></li>
+                        <li><a href="hvac-installation.html">HVAC Installation</a></li>
+                        <li><a href="maintenance-services.html">Maintenance</a></li>
+                        <li><a href="duct-cleaning.html">Duct Cleaning</a></li>
+                        <li><a href="emergency-services.html">Emergency Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <ul>
+                        <li>1947 Westwood Blvd, Suite 205  
+Los Angeles, CA 90025  
+United States  </li>
+                        <li><a href="tel:+1 (310) 555-0197 ">+1 (310) 555-0197 </a></li>
+                        <li><a href="mailto:customer@gocomfortair.com">customer@gocomfortair.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GoComfortAir LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+  const menuIcon = document.getElementById('menu-icon');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

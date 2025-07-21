@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoComfortAir - Professional HVAC Services | Heating & Cooling Experts</title>
+    <meta name="description" content="Professional HVAC services for residential and commercial clients. Expert heating, cooling, installation, repair, and maintenance services.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="uploads/air-conditioner.png" type="image/x-icon">
+    <style>
+        /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand img {
+  height: 50px;
+}
+
+/* Nav Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #007BFF;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    gap: 0px;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    gap: 0px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #f1f1f1;
+  }
+}
+
+.popup-message {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.popup-box p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.popup-box button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cards-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+/* Hide CTA on screens smaller than 768px */
+@media (max-width: 768px) {
+  .cta-button {
+    display: none;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+  <!-- Header -->
+<header class="header">
+  <nav class="nav container">
+    <div class="nav-brand">
+      <a href="index.html"><img src="uploads/header.png" alt="Logo"></a>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-icon" id="menu-icon">
+      &#9776;
+    </div>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#testimonials">Reviews</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <!-- CTA Button -->
+    <a href="index.html#contact" class="cta-button">Get a Free Quote</a>
+  </nav>
+</header>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>HVAC Maintenance Services</h1>
+            <p>Regular HVAC maintenance to prevent breakdowns, improve efficiency, and extend system life. Comprehensive service plans available.</p>
+            <button class="btn-secondary btn-large">Schedule Maintenance</button>
+        </div>
+    </section>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="service-details">
+                <div class="service-main">
+                    <h2>Preventive HVAC Maintenance</h2>
+                    <p>Regular maintenance is the key to keeping your HVAC system running efficiently and preventing costly breakdowns. Our comprehensive maintenance services include thorough inspections, cleaning, adjustments, and minor repairs to ensure optimal performance year-round. Preventive maintenance can extend your system's life by years while reducing energy costs.</p>
+
+                    <h2>Our Maintenance Services Include</h2>
+                    <ul>
+                        <li>Complete system inspection and performance testing</li>
+                        <li>Cleaning of coils, filters, and system components</li>
+                        <li>Lubrication of moving parts and motors</li>
+                        <li>Thermostat calibration and testing</li>
+                        <li>Electrical connection inspection and tightening</li>
+                        <li>Refrigerant level check and adjustment</li>
+                        <li>Ductwork inspection for leaks and damage</li>
+                        <li>Safety control testing and verification</li>
+                        <li>Indoor air quality assessment</li>
+                        <li>Energy efficiency optimization</li>
+                    </ul>
+
+                    <h2>Maintenance Service Plans</h2>
+                    <p>Our service plans provide year-round protection and priority service for your HVAC systems. Choose from our flexible maintenance options:</p>
+
+                    <h3>Basic Maintenance Plan</h3>
+                    <ul>
+                        <li>Two seasonal tune-ups per year (heating and cooling)</li>
+                        <li>Priority scheduling for service calls</li>
+                        <li>15% discount on repairs and parts</li>
+                        <li>Extended warranty protection</li>
+                    </ul>
+
+                    <h3>Comprehensive Care Plan</h3>
+                    <ul>
+                        <li>Two seasonal tune-ups with detailed reports</li>
+                        <li>Priority emergency service with reduced rates</li>
+                        <li>20% discount on all repairs and replacement parts</li>
+                        <li>Free filter replacements (up to 4 per year)</li>
+                        <li>Annual indoor air quality assessment</li>
+                        <li>Extended manufacturer warranty coverage</li>
+                    </ul>
+
+                    <h2>Benefits of Regular Maintenance</h2>
+                    <ul>
+                        <li>Prevents up to 95% of system breakdowns</li>
+                        <li>Reduces energy costs by up to 15%</li>
+                        <li>Extends equipment life by 5-10 years</li>
+                        <li>Maintains manufacturer warranty requirements</li>
+                        <li>Improves indoor air quality</li>
+                        <li>Ensures safe system operation</li>
+                        <li>Priority service scheduling</li>
+                    </ul>
+
+                    <h2>Seasonal Maintenance</h2>
+                    <p>We recommend scheduling maintenance twice yearly - once before the heating season and once before the cooling season. This ensures your system is ready for peak demand periods and operating at maximum efficiency when you need it most.</p>
+                </div>
+
+                <div class="service-sidebar">
+                   <div class="service-cta">
+                        <h3>Need AC Repair?</h3>
+                      <a href="index.html#contact">  <button class="btn-primary btn-large">Call +1 (310) 555-0197</button></a>
+                        <p style="margin-top: 1rem; font-size: 0.9rem;">Same-day service available</p>
+                    </div>
+
+                    <div class="service-info">
+                        <h3>Service Details</h3>
+                        <ul>
+                            <li><strong>Frequency:</strong> Twice yearly</li>
+                            <li><strong>Duration:</strong> 1-2 hours per visit</li>
+                            <li><strong>Scheduling:</strong> Flexible appointments</li>
+                            <li><strong>Reports:</strong> Detailed system reports</li>
+                            <li><strong>Guarantees:</strong> Satisfaction guaranteed</li>
+                            <li><strong>Priority Service:</strong> Plan members first</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-info">
+                        <h3>Plan Pricing</h3>
+                        <ul>
+                            <li><strong>Basic Plan:</strong> $149/year</li>
+                            <li><strong>Comprehensive Plan:</strong> $199/year</li>
+                            <li><strong>One-time Service:</strong> $89 per visit</li>
+                            <li><strong>Commercial Plans:</strong> Custom pricing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="related-services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Related Services</h2>
+                <p>Complete HVAC care for optimal system performance</p>
+            </div>
+            <div class="related-grid">
+                <div class="related-card">
+                    <h4>Air Conditioning Repair</h4>
+                    <p>Expert AC repair services when maintenance isn't enough to solve the problem.</p>
+                    <a href="air-conditioning-repair.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="related-card">
+                    <h4>Heating Repair</h4>
+                    <p>Professional heating system repairs to complement your maintenance plan.</p>
+                    <a href="heating-repair.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="related-card">
+                    <h4>Duct Cleaning</h4>
+                    <p>Professional duct cleaning services to improve indoor air quality and system efficiency.</p>
+                    <a href="duct-cleaning.html" class="service-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                <a href="index.html">   <img src="uploads/Modern Air Condition Logo (1).png" style="margin-bottom: 20px;" alt=""></a>
+                    <p>Your trusted HVAC professionals providing quality heating, cooling, and air quality solutions.</p>
+                    
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#testimonials">Reviews</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                           <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="air-conditioning-repair.html">AC Repair</a></li>
+                        <li><a href="heating-repair.html">Heating Repair</a></li>
+                        <li><a href="hvac-installation.html">HVAC Installation</a></li>
+                        <li><a href="maintenance-services.html">Maintenance</a></li>
+                        <li><a href="duct-cleaning.html">Duct Cleaning</a></li>
+                        <li><a href="emergency-services.html">Emergency Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <ul>
+                        <li>1947 Westwood Blvd, Suite 205  
+Los Angeles, CA 90025  
+United States  </li>
+                        <li><a href="tel:+1 (310) 555-0197 ">+1 (310) 555-0197 </a></li>
+                        <li><a href="mailto:customer@gocomfortair.com">customer@gocomfortair.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GoComfortAir LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+  const menuIcon = document.getElementById('menu-icon');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

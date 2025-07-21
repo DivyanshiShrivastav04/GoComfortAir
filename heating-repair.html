@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoComfortAir - Professional HVAC Services | Heating & Cooling Experts</title>
+    <meta name="description" content="Professional HVAC services for residential and commercial clients. Expert heating, cooling, installation, repair, and maintenance services.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="uploads/air-conditioner.png" type="image/x-icon">
+    <style>
+        /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand img {
+  height: 50px;
+}
+
+/* Nav Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #007BFF;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    gap: 0px;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    gap: 0px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #f1f1f1;
+  }
+}
+
+.popup-message {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.popup-box p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.popup-box button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cards-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+/* Hide CTA on screens smaller than 768px */
+@media (max-width: 768px) {
+  .cta-button {
+    display: none;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+  <!-- Header -->
+<header class="header">
+  <nav class="nav container">
+    <div class="nav-brand">
+      <a href="index.html"><img src="uploads/header.png" alt="Logo"></a>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-icon" id="menu-icon">
+      &#9776;
+    </div>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#testimonials">Reviews</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <!-- CTA Button -->
+    <a href="index.html#contact" class="cta-button">Get a Free Quote</a>
+  </nav>
+</header>
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Heating Repair Services</h1>
+            <p>Professional heating system repairs for furnaces, heat pumps, and boilers. Keep your home warm and comfortable with our expert service.</p>
+            <button class="btn-secondary btn-large">Schedule Heating Repair</button>
+        </div>
+    </section>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="service-details">
+                <div class="service-main">
+                    <h2>Expert Heating System Repairs</h2>
+                    <p>When your heating system fails, especially during cold weather, you need immediate professional help. Our certified heating technicians specialize in all types of heating system repairs, from gas furnaces to electric heat pumps and boiler systems. We provide fast, reliable service to restore warmth to your home or business.</p>
+
+                    <h2>Heating Systems We Service</h2>
+                    <ul>
+                        <li>Gas furnaces (all makes and models)</li>
+                        <li>Electric furnaces and heating systems</li>
+                        <li>Heat pumps (air-source and geothermal)</li>
+                        <li>Boiler systems and radiant heating</li>
+                        <li>Ductless mini-split heat pumps</li>
+                        <li>Packaged heating units</li>
+                        <li>Hybrid heating systems</li>
+                        <li>Oil-fired heating systems</li>
+                    </ul>
+
+                    <h2>Common Heating Problems We Fix</h2>
+                    <ul>
+                        <li>Furnace not producing heat or insufficient heating</li>
+                        <li>System won't start or ignition problems</li>
+                        <li>Strange noises, rattling, or banging sounds</li>
+                        <li>Frequent cycling or short cycling issues</li>
+                        <li>Thermostat not responding or inaccurate readings</li>
+                        <li>Poor airflow or uneven heating</li>
+                        <li>High energy bills and inefficient operation</li>
+                        <li>Gas leaks or safety concerns</li>
+                        <li>Heat pump not switching between modes</li>
+                        <li>Pilot light or igniter failures</li>
+                    </ul>
+
+                    <h2>Our Heating Repair Process</h2>
+                    <p>We follow a comprehensive diagnostic approach to identify and fix heating problems efficiently:</p>
+                    <ul>
+                        <li>Complete system inspection and safety check</li>
+                        <li>Advanced diagnostic testing of all components</li>
+                        <li>Clear explanation of problems and repair options</li>
+                        <li>Transparent, upfront pricing with no surprises</li>
+                        <li>Professional repair using OEM quality parts</li>
+                        <li>Thorough system testing and safety verification</li>
+                        <li>Comprehensive warranty on all work performed</li>
+                    </ul>
+
+                    <h2>Emergency Heating Service</h2>
+                    <p>Heating emergencies don't wait for business hours. When your heating system fails during cold weather, we're available 24/7 to provide emergency repair service. Our emergency technicians carry fully stocked service vehicles and can handle most repairs on the spot.</p>
+
+                    <p>We prioritize safety in all our heating repairs. Gas-fired systems receive special attention to ensure safe operation and compliance with local codes. Our technicians are trained in the latest safety protocols and carry gas leak detection equipment.</p>
+                </div>
+
+                <div class="service-sidebar">
+                   <div class="service-cta">
+                        <h3>Need AC Repair?</h3>
+                      <a href="index.html#contact">  <button class="btn-primary btn-large">Call +1 (310) 555-0197</button></a>
+                        <p style="margin-top: 1rem; font-size: 0.9rem;">Same-day service available</p>
+                    </div>
+
+                    <div class="service-info">
+                        <h3>Service Details</h3>
+                        <ul>
+                            <li><strong>Response Time:</strong> Same-day service</li>
+                            <li><strong>Service Hours:</strong> 8 AM - 6 PM</li>
+                            <li><strong>Emergency Service:</strong> 24/7 available</li>
+                            <li><strong>Warranty:</strong> 1 year on repairs</li>
+                            <li><strong>Systems Serviced:</strong> All heating types</li>
+                            <li><strong>Safety Certified:</strong> Gas and electrical</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-info">
+                        <h3>Pricing</h3>
+                        <ul>
+                            <li><strong>Diagnostic Fee:</strong> $89</li>
+                            <li><strong>Service Call:</strong> FREE with repair</li>
+                            <li><strong>Emergency Service:</strong> Standard rates + $75</li>
+                            <li><strong>Safety Inspection:</strong> $45</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="related-services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Related Services</h2>
+                <p>Complete heating solutions for your comfort needs</p>
+            </div>
+            <div class="related-grid">
+                <div class="related-card">
+                    <h4>HVAC Installation</h4>
+                    <p>New heating system installation with energy-efficient equipment and professional setup.</p>
+                    <a href="hvac-installation.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="related-card">
+                    <h4>Maintenance Services</h4>
+                    <p>Annual heating system maintenance to prevent breakdowns and ensure efficient operation.</p>
+                    <a href="maintenance-services.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="related-card">
+                    <h4>Air Conditioning Repair</h4>
+                    <p>Complete AC repair services to complement your heating system maintenance.</p>
+                    <a href="air-conditioning-repair.html" class="service-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                <a href="index.html">   <img src="uploads/Modern Air Condition Logo (1).png" style="margin-bottom: 20px;" alt=""></a>
+                    <p>Your trusted HVAC professionals providing quality heating, cooling, and air quality solutions.</p>
+                    
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#testimonials">Reviews</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                           <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="air-conditioning-repair.html">AC Repair</a></li>
+                        <li><a href="heating-repair.html">Heating Repair</a></li>
+                        <li><a href="hvac-installation.html">HVAC Installation</a></li>
+                        <li><a href="maintenance-services.html">Maintenance</a></li>
+                        <li><a href="duct-cleaning.html">Duct Cleaning</a></li>
+                        <li><a href="emergency-services.html">Emergency Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <ul>
+                        <li>1947 Westwood Blvd, Suite 205  
+Los Angeles, CA 90025  
+United States  </li>
+                        <li><a href="tel:+1 (310) 555-0197 ">+1 (310) 555-0197 </a></li>
+                        <li><a href="mailto:customer@gocomfortair.com">customer@gocomfortair.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GoComfortAir LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+  const menuIcon = document.getElementById('menu-icon');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

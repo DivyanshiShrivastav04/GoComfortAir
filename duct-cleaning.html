@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoComfortAir - Professional HVAC Services | Heating & Cooling Experts</title>
+    <meta name="description" content="Professional HVAC services for residential and commercial clients. Expert heating, cooling, installation, repair, and maintenance services.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="uploads/air-conditioner.png" type="image/x-icon">
+    <style>
+        /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand img {
+  height: 50px;
+}
+
+/* Nav Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #007BFF;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    gap: 0px;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    gap: 0px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #f1f1f1;
+  }
+}
+
+.popup-message {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.popup-box p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.popup-box button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cards-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+/* Hide CTA on screens smaller than 768px */
+@media (max-width: 768px) {
+  .cta-button {
+    display: none;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+  <!-- Header -->
+<header class="header">
+  <nav class="nav container">
+    <div class="nav-brand">
+      <a href="index.html"><img src="uploads/header.png" alt="Logo"></a>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-icon" id="menu-icon">
+      &#9776;
+    </div>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#testimonials">Reviews</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <!-- CTA Button -->
+    <a href="index.html#contact" class="cta-button">Get a Free Quote</a>
+  </nav>
+</header>
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Professional Duct Cleaning Services</h1>
+            <p>Comprehensive air duct cleaning to improve indoor air quality, system efficiency, and your family's health. Advanced equipment and certified technicians.</p>
+            <button class="btn-secondary btn-large">Schedule Duct Cleaning</button>
+        </div>
+    </section>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="service-details">
+                <div class="service-main">
+                    <h2>Why Choose Professional Duct Cleaning?</h2>
+                    <p>Your home's air ducts circulate air throughout your living space multiple times per day. Over time, these ducts accumulate dust, debris, allergens, and even mold, which can significantly impact your indoor air quality and HVAC system efficiency. Our professional duct cleaning services remove these contaminants, improving both air quality and system performance.</p>
+
+                    <h2>Signs You Need Duct Cleaning</h2>
+                    <ul>
+                        <li>Visible dust buildup around vents and registers</li>
+                        <li>Musty or stale odors from the ventilation system</li>
+                        <li>Increased allergy symptoms or respiratory issues</li>
+                        <li>Recent home renovation or construction</li>
+                        <li>Pest infestation in ductwork</li>
+                        <li>Visible mold growth in or around ducts</li>
+                        <li>Inconsistent airflow between rooms</li>
+                        <li>Higher than usual energy bills</li>
+                        <li>HVAC system running more frequently</li>
+                    </ul>
+
+                    <h2>Our Duct Cleaning Process</h2>
+                    <p>We use industry-leading equipment and follow NADCA (National Air Duct Cleaners Association) standards for thorough, effective cleaning:</p>
+                    <ul>
+                        <li>Complete system inspection with camera technology</li>
+                        <li>Containment setup to prevent dust spread</li>
+                        <li>Powerful vacuum collection system setup</li>
+                        <li>Mechanical agitation to loosen debris</li>
+                        <li>Thorough cleaning of supply and return ducts</li>
+                        <li>Register and grille cleaning and sanitizing</li>
+                        <li>Optional antimicrobial treatment application</li>
+                        <li>Final inspection and system testing</li>
+                        <li>Before and after photos documentation</li>
+                    </ul>
+
+                    <h2>What We Clean</h2>
+                    <ul>
+                        <li>Supply air ducts and return air ducts</li>
+                        <li>Registers, grilles, and diffusers</li>
+                        <li>Heat exchangers and cooling coils</li>
+                        <li>Condensate drain pans and drip pans</li>
+                        <li>Fan motor and fan housing</li>
+                        <li>Air plenum and air handling unit housing</li>
+                        <li>Air filter and filter housing</li>
+                    </ul>
+
+                    <h2>Health and Efficiency Benefits</h2>
+                    <p>Professional duct cleaning provides multiple benefits for your home and family:</p>
+                    <ul>
+                        <li>Improved indoor air quality and reduced allergens</li>
+                        <li>Enhanced HVAC system efficiency and airflow</li>
+                        <li>Reduced energy costs and utility bills</li>
+                        <li>Extended HVAC equipment life</li>
+                        <li>Elimination of unpleasant odors</li>
+                        <li>Reduced dust throughout the home</li>
+                        <li>Better respiratory health for family members</li>
+                    </ul>
+
+                    <h2>When to Schedule Duct Cleaning</h2>
+                    <p>The EPA and NADCA recommend having your ducts professionally cleaned every 3-5 years for most homes. However, certain conditions may require more frequent cleaning, such as pets, smokers, recent renovations, or family members with allergies or respiratory conditions.</p>
+                </div>
+
+                <div class="service-sidebar">
+                   <div class="service-cta">
+                        <h3>Need AC Repair?</h3>
+                      <a href="index.html#contact">  <button class="btn-primary btn-large">Call +1 (310) 555-0197</button></a>
+                        <p style="margin-top: 1rem; font-size: 0.9rem;">Same-day service available</p>
+                    </div>
+                    <div class="service-info">
+                        <h3>Service Details</h3>
+                        <ul>
+                            <li><strong>Duration:</strong> 3-5 hours typical</li>
+                            <li><strong>Equipment:</strong> Truck-mounted vacuum</li>
+                            <li><strong>Standards:</strong> NADCA certified process</li>
+                            <li><strong>Documentation:</strong> Before/after photos</li>
+                            <li><strong>Guarantee:</strong> Satisfaction guaranteed</li>
+                            <li><strong>Follow-up:</strong> 30-day satisfaction check</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-info">
+                        <h3>Pricing</h3>
+                        <ul>
+                            <li><strong>Whole House:</strong> $299-$499</li>
+                            <li><strong>Inspection:</strong> FREE with cleaning</li>
+                            <li><strong>Antimicrobial Treatment:</strong> $75 additional</li>
+                            <li><strong>Dryer Vent:</strong> $89 add-on</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="related-services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Related Services</h2>
+                <p>Complete air quality solutions for your home</p>
+            </div>
+            <div class="related-grid">
+                <div class="related-card">
+                    <h4>Maintenance Services</h4>
+                    <p>Regular HVAC maintenance including filter changes and system cleaning.</p>
+                    <a href="maintenance-services.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="related-card">
+                    <h4>Air Conditioning Repair</h4>
+                    <p>Professional AC repair services to ensure optimal cooling performance.</p>
+                    <a href="air-conditioning-repair.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="related-card">
+                    <h4>HVAC Installation</h4>
+                    <p>New HVAC system installation with clean ductwork for optimal performance.</p>
+                    <a href="hvac-installation.html" class="service-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+      <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                <a href="index.html">   <img src="uploads/Modern Air Condition Logo (1).png" style="margin-bottom: 20px;" alt=""></a>
+                    <p>Your trusted HVAC professionals providing quality heating, cooling, and air quality solutions.</p>
+                    
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#testimonials">Reviews</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                           <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="air-conditioning-repair.html">AC Repair</a></li>
+                        <li><a href="heating-repair.html">Heating Repair</a></li>
+                        <li><a href="hvac-installation.html">HVAC Installation</a></li>
+                        <li><a href="maintenance-services.html">Maintenance</a></li>
+                        <li><a href="duct-cleaning.html">Duct Cleaning</a></li>
+                        <li><a href="emergency-services.html">Emergency Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <ul>
+                        <li>1947 Westwood Blvd, Suite 205  
+Los Angeles, CA 90025  
+United States  </li>
+                        <li><a href="tel:+1 (310) 555-0197 ">+1 (310) 555-0197 </a></li>
+                        <li><a href="mailto:customer@gocomfortair.com">customer@gocomfortair.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GoComfortAir LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+  const menuIcon = document.getElementById('menu-icon');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
